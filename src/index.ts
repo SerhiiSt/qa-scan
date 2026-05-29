@@ -1,7 +1,9 @@
 import { runtimeCheck } from "./checks/api/runtimeCheck";
 
 async function main() {
-  await runtimeCheck();
+  const result = await runtimeCheck();
+
+  console.log(result);
 }
 
 main();
