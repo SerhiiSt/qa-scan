@@ -61,3 +61,10 @@ The Cursor discussion focused on:
 * future extensibility for stack-specific checks.
 
 This planning stage strongly influenced the final modular execution architecture.
+
+### Screenshot 3 — Initial Project Bootstrap
+![Initial Project Bootstrap](./docs/screenshots/03-project-bootstrap.png)
+
+All runtime targets, credentials, ports, and paths are loaded dynamically through environment configuration.
+
+The implementation intentionally avoids hardcoded infrastructure assumptions to support execution against arbitrary local projects and stacks.
