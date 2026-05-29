@@ -29,3 +29,35 @@ This directly supports the assignment requirement for graceful degradation and i
 The screenshot also shows early Cursor-assisted architecture discussions and planning notes before implementation started.
 
 
+### Screenshot 2 — Architecture Planning
+
+![Architecture Planning](./docs/screenshots/02-architecture-planning.png)
+
+
+Early architecture planning phase before implementation began.
+
+At this stage, the project structure and execution model were designed around the assignment’s core constraints:
+
+* graceful degradation,
+* config-driven execution,
+* modular quality checks,
+* runtime-independent operation.
+
+The scanner was intentionally separated into independent modules:
+
+* static analysis,
+* security analysis,
+* API/runtime checks,
+* browser automation,
+* AI-assisted analysis.
+
+A normalized `CheckResult` interface was introduced early to ensure all checks could produce consistent, report-friendly output regardless of implementation details.
+
+The Cursor discussion focused on:
+
+* pipeline orchestration,
+* handling unavailable runtime services,
+* avoiding cascading failures,
+* future extensibility for stack-specific checks.
+
+This planning stage strongly influenced the final modular execution architecture.
