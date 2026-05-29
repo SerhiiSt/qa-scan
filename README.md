@@ -68,3 +68,17 @@ This planning stage strongly influenced the final modular execution architecture
 All runtime targets, credentials, ports, and paths are loaded dynamically through environment configuration.
 
 The implementation intentionally avoids hardcoded infrastructure assumptions to support execution against arbitrary local projects and stacks.
+
+### Screenshot 4 — Runtime Failure & Graceful Degradation
+
+Initial implementation crashed because runtime configuration was missing.
+![Runtime Failure & Graceful Degradation 1](./docs/screenshots/04-1runtime-failure-and-graceful-fallback.png)
+
+Refactored runtime checks to:
+- validate configuration early,
+- avoid invalid fetch calls,
+- return normalized SKIPPED results,
+- continue execution gracefully.
+
+![Runtime Failure & Graceful Degradation 1](./docs/screenshots/04-runtime-failure-and-graceful-fallback.png)
+
