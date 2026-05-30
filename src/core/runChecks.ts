@@ -1,9 +1,11 @@
 import { RuntimeCheck } from "../checks/api/runtimeCheck";
 import { Check } from "../types/Check";
+import { BrowserCheck } from "../checks/browser/browserCheck";
 
 export async function runChecks() {
   const checks: Check[] = [
     new RuntimeCheck(),
+    new BrowserCheck(),
   ];
 
   const results = [];

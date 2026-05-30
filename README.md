@@ -126,7 +126,7 @@ execution isolation,
 and a scalable iteration model.
 
 We can add new checks like:
-
+```
 const checks: Check[] = [
   new RuntimeCheck(),
   new StaticCheck(),
@@ -134,6 +134,7 @@ const checks: Check[] = [
   new BrowserCheck(),
   new AiCheck()
 ];
+```
 
 This design allows new checks to be added with minimal changes to orchestration logic while supporting graceful failure handling.
 
