@@ -191,3 +191,23 @@ The report generation process remains independent from individual quality checks
 
 This screenshot captures the first end-to-end execution producing a consolidated quality report.
 
+### Screenshot 10 — Git History & Development Iteration
+
+![Git History](./docs/screenshots/10-git-history-and-iteration.png)
+
+The project was developed incrementally through multiple focused iterations rather than a single implementation pass.
+
+The commit history reflects the progression from:
+
+* requirement analysis,
+* architecture planning,
+* project bootstrap,
+* runtime validation,
+* browser automation,
+* AI-assisted analysis,
+* report generation,
+* and final documentation.
+
+Maintaining small, focused commits made it easier to validate architectural decisions, isolate regressions, and demonstrate the evolution of the solution throughout development.
+
+
