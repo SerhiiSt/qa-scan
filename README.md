@@ -138,3 +138,20 @@ const checks: Check[] = [
 
 This design allows new checks to be added with minimal changes to orchestration logic while supporting graceful failure handling.
 
+
+### Screenshot 7 — Playwright Browser Checks
+
+![Playwright Browser Checks](./docs/screenshots/07-playwright-browser-checks.png)
+
+
+Browser automation was introduced using Playwright to validate frontend behavior beyond static repository analysis.
+
+The initial browser check focused on:
+
+launching a browser instance,
+navigating to the configured target,
+validating page availability,
+and collecting basic browser-level signals.
+
+The architecture was designed so browser validation remains independent from API and static analysis checks, allowing execution to continue even when frontend services are unavailable.
+
