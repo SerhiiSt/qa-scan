@@ -19,3 +19,9 @@ export async function runChecks() {
 
   return results;
 }
+
+//Future checks:
+// - StaticCheck
+// - SecurityCheck
+// - BrowserCheck
+// - AiCheck
