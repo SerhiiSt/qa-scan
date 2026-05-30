@@ -82,3 +82,30 @@ Refactored runtime checks to:
 
 ![Runtime Failure & Graceful Degradation 1](./docs/screenshots/04-runtime-failure-and-graceful-fallback.png)
 
+### Screenshot 5 — AI Assisted Architecture Refactor
+![AI Assisted Architecture Refactor](./docs/screenshots/05-ai-assisted-architecture-refactor.png)
+
+We can use prompt like:
+- How should I orchestrate independent quality checks without tightly coupling execution logic?
+- Would a plugin-based architecture make sense for stack-specific checks?
+- How can I prevent one failed check from crashing the entire pipeline?
+
+As the number of quality checks increased, the initial execution pipeline became too tightly coupled and difficult to scale cleanly.
+
+Cursor was used to explore architectural alternatives for:
+
+independent check execution,
+plugin-style extensibility,
+isolated failure handling,
+and stack-specific adaptation.
+
+The final design introduced:
+
+shared check interfaces,
+execution isolation,
+normalized results,
+and modular orchestration.
+
+The screenshot captures the transition from an early hardcoded execution model toward a more extensible pipeline-oriented architecture.
+
+
