@@ -109,3 +109,31 @@ and modular orchestration.
 The screenshot captures the transition from an early hardcoded execution model toward a more extensible pipeline-oriented architecture.
 
 
+### Screenshot 6 — Manual Refactor
+
+![Manual Refactor](./docs/screenshots/06-manual-refactor.png)
+
+
+After the first working implementation, the execution pipeline was manually refactored to improve maintainability and extensibility. I refactored early.
+
+The original approach directly invoked individual checks, which would become increasingly difficult to manage as additional modules were introduced.
+
+The refactor introduced:
+
+a shared Check interface,
+a centralized check registry,
+execution isolation,
+and a scalable iteration model.
+
+We can add new checks like:
+
+const checks: Check[] = [
+  new RuntimeCheck(),
+  new StaticCheck(),
+  new SecurityCheck(),
+  new BrowserCheck(),
+  new AiCheck()
+];
+
+This design allows new checks to be added with minimal changes to orchestration logic while supporting graceful failure handling.
+
