@@ -148,10 +148,28 @@ Browser automation was introduced using Playwright to validate frontend behavior
 
 The initial browser check focused on:
 
-launching a browser instance,
-navigating to the configured target,
-validating page availability,
-and collecting basic browser-level signals.
+* launching a browser instance,
+* navigating to the configured target,
+* validating page availability,
+* and collecting basic browser-level signals.
 
 The architecture was designed so browser validation remains independent from API and static analysis checks, allowing execution to continue even when frontend services are unavailable.
 
+
+### Screenshot 8 — AI Feature Integration
+
+![AI Feature Integration](./docs/screenshots/08-ai-feature-integration.png)
+
+
+An AI-assisted analysis layer was introduced to complement deterministic quality checks.
+
+The goal of this module is not to replace static analysis or runtime validation, but to identify patterns that are difficult to capture through predefined rules alone.
+
+Potential use cases include:
+
+* architectural complexity assessment,
+* security smell detection,
+* error-handling gaps,
+* and maintainability concerns.
+
+The screenshot captures the exploration of AI-specific quality signals and the introduction of a dedicated AI analysis module within the scanning pipeline.
