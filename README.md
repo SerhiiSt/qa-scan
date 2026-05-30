@@ -173,3 +173,21 @@ Potential use cases include:
 * and maintainability concerns.
 
 The screenshot captures the exploration of AI-specific quality signals and the introduction of a dedicated AI analysis module within the scanning pipeline.
+
+### Screenshot 9 — Sample Report Generation
+
+![Sample Report Generation](./docs/screenshots/09-report-generation.png)
+
+The final stage of development focused on consolidating findings into a human-readable report.
+
+A dedicated reporting layer was introduced to transform normalized check results into actionable output containing:
+
+* findings,
+* recommendations,
+* execution outcomes,
+* and supporting context.
+
+The report generation process remains independent from individual quality checks, allowing additional output formats to be added in future iterations without modifying analysis logic.
+
+This screenshot captures the first end-to-end execution producing a consolidated quality report.
+
