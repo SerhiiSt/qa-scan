@@ -2,16 +2,40 @@ import { RuntimeCheck } from "../checks/api/runtimeCheck";
 import { Check } from "../types/Check";
 import { BrowserCheck } from "../checks/browser/browserCheck";
 import { AiCheck } from "../checks/ai/aiCheck";
+import { detectProjectType } from "./projectDetector";
+
 export async function runChecks() {
-  const checks: Check[] = [
-    new RuntimeCheck(),
-    new BrowserCheck(),
-    new AiCheck(),
-  ];
+  const projectType = detectProjectType();
+
+  console.log(`Detected Project Type: ${projectType}`);
+
+  let checks: Check[] = [];
+
+  switch (projectType) {
+    case "node":
+      checks = [
+        new RuntimeCheck(),
+        new BrowserCheck(),
+        new AiCheck(),
+      ];
+      break;
+
+    case "python":
+      checks = [
+        new AiCheck(),
+      ];
+      break;
+
+    default:
+      checks = [
+        new AiCheck(),
+      ];
+  }
 
   const results = [];
 
   for (const check of checks) {
+    console.log(`Running: ${check.name}`)
     try {
       const result = await check.run();
       results.push(result);
