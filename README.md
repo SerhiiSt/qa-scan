@@ -211,3 +211,17 @@ The commit history reflects the progression from:
 Maintaining small, focused commits made it easier to validate architectural decisions, isolate regressions, and demonstrate the evolution of the solution throughout development.
 
 
+## Automatic Project Detection (Bonus)
+![Automatic Project Detection (Bonus)](./docs/screenshots/11-project-detection.png)
+
+The scanner automatically identifies the target project type by inspecting common ecosystem files.
+
+Supported detection:
+- Node.js / TypeScript
+- Python
+- Java
+- Go
+
+The detected project type influences which quality checks are enabled, allowing the scanner to provide more relevant findings while remaining configuration-driven.
+
+This is could be improved. I specified it as a start point.
