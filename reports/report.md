@@ -49,3 +49,14 @@ README.md found
 
 No action required
 
+
+### PASS
+
+**Finding**
+
+Basic configuration security checks passed
+
+**Recommendation**
+
+No action required
+
