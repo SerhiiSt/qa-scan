@@ -3,6 +3,7 @@ import { Check } from "../types/Check";
 import { BrowserCheck } from "../checks/browser/browserCheck";
 import { AiCheck } from "../checks/ai/aiCheck";
 import { detectProjectType } from "./projectDetector";
+import { StaticCheck } from "../checks/static/staticCheck";
 
 export async function runChecks() {
   const projectType = detectProjectType();
@@ -17,6 +18,7 @@ export async function runChecks() {
         new RuntimeCheck(),
         new BrowserCheck(),
         new AiCheck(),
+        new StaticCheck,
       ];
       break;
 
